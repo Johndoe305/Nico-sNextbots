@@ -249,4 +249,24 @@ antiBotBtn.MouseButton1Click:Connect(function()
 	end
 end)
 
-print("✅ Bot Tools Hub carregado | ESP REAL | Anti TP corrigido")
+-- NOTIFICAÇÃO
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Made by Old Scripts";
+    Text = "Script loaded";
+    Icon = "rbxassetid://288817482"; -- icone de virus so pra dar um pouco de susto kkkk
+    Duration = 6;
+    Button1 = "OK";
+    Callback = callback;
+})
+
+-- Somzinho de carregado
+task.spawn(function()
+    local s = Instance.new("Sound")
+    s.SoundId = "rbxassetid://3023237993"
+    s.Volume = 0.4
+    s.Parent = game:GetService("SoundService")
+    s:Play()
+    task.delay(3, function() s:Destroy() end)
+end)
+
+print("[loaded]")
